@@ -1,0 +1,85 @@
+import { useState } from 'react'
+import { NavLink, Outlet } from 'react-router-dom'
+import { navItems } from '../content'
+
+export default function SiteLayout() {
+  const [mobileNavOpen, setMobileNavOpen] = useState(false)
+
+  return (
+    <div className="bg-slate-50 text-slate-800">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+          <NavLink to="/" className="text-xl font-bold tracking-tight text-amber-500 sm:text-2xl">
+            CHOPS <span className="text-slate-700">International</span>
+          </NavLink>
+          <button
+            className="rounded-md border border-slate-300 px-3 py-2 text-sm lg:hidden"
+            onClick={() => setMobileNavOpen((state) => !state)}
+            aria-label="Toggle navigation"
+          >
+            Menu
+          </button>
+          <nav className="hidden items-center gap-6 text-sm lg:flex">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className={({ isActive }) =>
+                  `transition hover:text-amber-500 ${isActive ? 'text-amber-500' : ''}`
+                }
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </nav>
+        </div>
+        {mobileNavOpen && (
+          <nav className="border-t border-slate-200 bg-white px-4 py-4 lg:hidden">
+            <div className="mx-auto flex max-w-7xl flex-col gap-3 text-sm">
+              {navItems.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  className={({ isActive }) =>
+                    `rounded-md px-2 py-1.5 ${isActive ? 'bg-amber-100' : 'hover:bg-slate-100'}`
+                  }
+                  onClick={() => setMobileNavOpen(false)}
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+            </div>
+          </nav>
+        )}
+      </header>
+
+      <main className="pt-20">
+        <Outlet />
+      </main>
+
+      <footer className="border-t border-slate-200 bg-slate-100">
+        <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-3 lg:px-8">
+          <div>
+            <h3 className="text-lg font-semibold text-amber-600">CHOPS International</h3>
+            <p className="mt-3 text-sm text-slate-600">
+              Independent fellowship of Rotary leaders carrying forward the Create Hope mission through ongoing service.
+            </p>
+          </div>
+          <div>
+            <h4 className="font-semibold">Footer Menu</h4>
+            <ul className="mt-3 space-y-2 text-sm text-slate-600">
+              <li>Privacy Policy</li>
+              <li>Terms of Use</li>
+              <li>Rotary Branding Disclaimer</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold">Social Media</h4>
+            <p className="mt-3 text-sm text-slate-600">Facebook, Instagram, YouTube, WhatsApp</p>
+            <p className="mt-2 text-sm text-amber-600">#CHOPs</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
