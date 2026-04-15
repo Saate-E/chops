@@ -1,12 +1,8 @@
 import { useState, useEffect } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { navItems } from "../content";
-import {
-  FaFacebookSquare,
-  FaYoutubeSquare,
-  FaInstagramSquare,
-  FaLinkedin,
-} from "react-icons/fa";
+import { AtSign } from "lucide-react";
+import { TbBrandTiktokFilled, TbBrandFacebookFilled } from "react-icons/tb";
 import Logo from "../assets/logo.png";
 
 export default function SiteLayout() {
@@ -19,10 +15,14 @@ export default function SiteLayout() {
 
   return (
     <div className="bg-slate-50 text-slate-800">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <header className="sticky inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+        <div className="mx-auto flex h-[100px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <NavLink to="/">
-            <img src={Logo} alt="CHOPS International" className="w-30" />
+            <img
+              src={Logo}
+              alt="CHOPS International"
+              className="w-12 lg:w-15"
+            />
           </NavLink>
           <button
             className="rounded-md border border-slate-300 p-2 lg:hidden"
@@ -77,7 +77,7 @@ export default function SiteLayout() {
         )}
       </header>
 
-      <main className="pt-20">
+      <main>
         <Outlet />
       </main>
 
@@ -107,25 +107,19 @@ export default function SiteLayout() {
                 href="#"
                 className="text-slate-600 hover:text-amber-600 transition"
               >
-                <FaFacebookSquare className="h-7 w-7" />
+                <TbBrandFacebookFilled className="h-6 w-6" />
               </a>
               <a
                 href="#"
                 className="text-slate-600 hover:text-amber-600 transition"
               >
-                <FaInstagramSquare className="h-7 w-7" />
+                <TbBrandTiktokFilled className="h-6 w-6" />
               </a>
               <a
                 href="#"
                 className="text-slate-600 hover:text-amber-600 transition"
               >
-                <FaLinkedin className="h-7 w-7" />
-              </a>
-              <a
-                href="#"
-                className="text-slate-600 hover:text-amber-600 transition"
-              >
-                <FaYoutubeSquare className="h-7 w-7" />
+                <AtSign className="h-6 w-6" />
               </a>
             </div>
           </div>

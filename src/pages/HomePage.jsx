@@ -4,6 +4,7 @@ import { blogs, gallery, pillars, updates } from "../content";
 import hero1 from "../assets/hero.jpg";
 import hero2 from "../assets/hero2.jpg";
 import hero3 from "../assets/hero3.jpg";
+import gallery1 from "../assets/gallery1.jpg";
 
 const constructions = [
   {
