@@ -93,7 +93,6 @@ export default function SiteLayout() {
             </p>
           </div>
           <div>
-            <h4 className="font-semibold">Footer Menu</h4>
             <ul className="mt-3 space-y-2 text-sm text-slate-600">
               <li>Privacy Policy</li>
               <li>Terms of Use</li>
@@ -101,7 +100,7 @@ export default function SiteLayout() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold">Social Media</h4>
+            <h4 className="font-semibold text-amber-600">Connect with Us:</h4>
             <div className="mt-3 flex gap-4">
               <a
                 href="#"

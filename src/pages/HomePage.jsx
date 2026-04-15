@@ -146,7 +146,7 @@ export default function HomePage() {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="h-56 w-full object-cover md:col-span-2 md:h-full"
+                  className="h-56 w-full object-cover md:col-span-2"
                 />
                 <div className="p-6 md:col-span-3">
                   <h3 className="text-lg font-semibold text-amber-500">
@@ -214,6 +214,36 @@ export default function HomePage() {
       </section>
 
       <section className="section-shell">
+        <p className="section-kicker">Gallery</p>
+        <h2 className="section-title">CHOPS Moments</h2>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          {gallery.slice(0, 3).map((item) => (
+            <figure
+              key={item.title}
+              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <figcaption className="p-4 text-sm text-slate-700">
+                {item.title}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <div className="mt-6 text-center">
+          <Link
+            to="/gallery"
+            className="inline-block font-semibold text-slate-900 hover:text-amber-500"
+          >
+            See More ......
+          </Link>
+        </div>
+      </section>
+
+      <section className="section-shell">
         <p className="section-kicker">Features</p>
         <h2 className="section-title">Fellowship strengths</h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -232,8 +262,8 @@ export default function HomePage() {
       <section className="section-shell bg-slate-100">
         <p className="section-kicker">Projects</p>
         <h2 className="section-title">Recent CHOPS project moments</h2>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-          {gallery.map((item) => (
+        <div className="mt-8 grid gap-6 grid-cols-3">
+          {gallery.slice(0, 3).map((item) => (
             <figure
               key={item.title}
               className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
