@@ -40,33 +40,29 @@ export default function MembershipPage() {
     setLoading(true);
 
     const { data: existingMember, error: selectError } = await supabase
-      .from("members")
-      .select("id")
-      .eq("email", email)
+      .from("chops")
+      .select('"Email"')
+      .eq('"Email"', email)
       .maybeSingle();
 
     if (selectError) {
-      setStatus("Unable to verify membership status. Please try again.");
-      setLoading(false);
-      return;
+      console.error("Error checking membership status:", selectError);
     }
 
     if (existingMember) {
-      setStatus(
-        "This email is already registered. If you need help, contact the site administrator.",
-      );
+      setStatus("User already exists");
       setLoading(false);
       return;
     }
 
-    const { error: insertError } = await supabase.from("members").insert([
+    const { error: insertError } = await supabase.from("chops").insert([
       {
         full_name: fullName,
         rotary_club: rotaryClub,
-        district,
+        district: district,
         date_of_birth: dob,
-        email,
-        location,
+        email: email,
+        location: location,
       },
     ]);
 
@@ -77,7 +73,7 @@ export default function MembershipPage() {
     }
 
     setStatus(
-      "Your membership request is submitted. We have recorded your email and prevented duplicate signups.",
+      "Your membership request is submitted. Congratulations on joining CHOPS! We will review your request and get back to you soon. In the meantime, feel free to explore our website and connect with fellow presidents in our community.",
     );
     setFormData({
       fullName: "",

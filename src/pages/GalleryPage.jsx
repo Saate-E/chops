@@ -15,16 +15,13 @@ export default function GalleryPage() {
           {gallery.map((item) => (
             <figure
               key={item.title}
-              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+              className="overflow-hidden border border-slate-200 bg-white shadow-sm"
             >
               <img
                 src={item.image}
                 alt={item.title}
-                className="h-72 w-full object-cover transition duration-500 group-hover:scale-105"
+                className="h-72 w-full object-cover transition duration-500 hover:scale-105"
               />
-              <figcaption className="bg-slate-100 p-4 text-sm text-slate-700">
-                {item.title}
-              </figcaption>
             </figure>
           ))}
         </div>
