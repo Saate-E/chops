@@ -16,12 +16,12 @@ export default function SiteLayout() {
   return (
     <div className="bg-slate-50 text-slate-800">
       <header className="sticky inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex h-[100px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex h-25 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <NavLink to="/">
             <img
               src={Logo}
               alt="CHOPS International"
-              className="w-12 lg:w-15"
+              className="w-20 lg:w-35 object-fill"
             />
           </NavLink>
           <button
