@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import PageHero from "../components/PageHero";
-import { blogs, gallery, pillars, updates } from "../content";
+import { blogs, gallery, pillars, projects, updates } from "../content";
 import hero1 from "../assets/hero.jpg";
 import hero2 from "../assets/hero2.jpg";
 import hero3 from "../assets/hero3.jpg";
 import gallery1 from "../assets/gallery1.jpg";
+import green from "../assets/green 1.jpeg";
 
 const constructions = [
   {
@@ -26,10 +27,9 @@ const constructions = [
       "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Empowering Girls Continuum",
-    text: "Scholarship and mentorship pathways that sustain girls-focused service beyond presidential terms.",
-    image:
-      "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=80",
+    title: "Green Schools Initiatives",
+    text: "Promoting environmental awareness and sustainability through youth education and community programs.",
+    image: green,
   },
 ];
 
@@ -40,7 +40,7 @@ const features = [
   },
   {
     title: "Regional Collaboration",
-    text: "Share proven playbooks across chapters and districts for better project execution.",
+    text: "Share proven playbooks across clubs and districts for better project execution.",
   },
   {
     title: "Member-Led Innovation",
@@ -54,17 +54,17 @@ const features = [
 
 const testimonials = [
   {
-    name: "District President, West Africa",
+    name: "District Govenor",
     quote:
       "CHOPS gave us a practical platform to keep serving together after our terms ended. The network is active and impactful.",
   },
   {
-    name: "Club Leader, South Asia",
+    name: "Club President",
     quote:
       "Our mental health collaboration reached more families because CHOPS connected us to members with the right expertise.",
   },
   {
-    name: "Fellowship Coordinator, North America",
+    name: "CHOPS District Coordinator",
     quote:
       "The reunion model is not only social. It directly generates projects, partnerships, and measurable service outcomes.",
   },
@@ -96,36 +96,26 @@ export default function HomePage() {
               sustaining Create Hope outcomes globally.
             </p>
           </div>
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-            <h3 className="text-2xl font-semibold">
-              Quick Membership Interest
-            </h3>
-            <p className="mt-2 text-slate-600">
-              Join the fellowship and receive project and reunion updates.
-            </p>
-            <div className="mt-5 space-y-4">
-              <input className="form-input" placeholder="Full name" />
-              <input
-                className="form-input"
-                placeholder="Email address"
-                type="email"
-              />
-              <textarea
-                className="form-input min-h-24"
-                placeholder="How would you like to contribute?"
-              />
-              <div className="flex flex-wrap gap-3">
-                <button
-                  type="button"
-                  className="rounded-md bg-amber-400 px-5 py-3 font-semibold text-slate-900"
-                >
-                  Submit Interest
-                </button>
+          <div className="relative rounded-2xl border border-slate-200 overflow-hidden shadow-sm h-80">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+              alt="Membership"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/40"></div>
+            <div className="relative h-full flex flex-col justify-center items-center text-center p-6 sm:p-8">
+              <h3 className="text-3xl font-semibold text-white">
+                Ready to Connect?
+              </h3>
+              <p className="mt-3 text-white/90 max-w-xs">
+                Discover membership benefits and join our global network.
+              </p>
+              <div className="mt-8">
                 <Link
                   to="/membership"
-                  className="rounded-md border border-slate-400 px-5 py-3 font-semibold"
+                  className="inline-block rounded-md bg-amber-400 px-6 py-3 font-semibold text-slate-900 hover:bg-amber-500 transition"
                 >
-                  Full Membership Page
+                  Explore Membership
                 </Link>
               </div>
             </div>
@@ -193,8 +183,9 @@ export default function HomePage() {
               Service momentum beyond one Rotary year
             </h2>
             <p className="section-text">
-              CHOPS bridges fellowship and execution, helping chapters continue
-              high-value service with strong peer support and shared frameworks.
+              CHOPS bridges fellowship and project execution, collaborating with
+              clubs to continue high-value service with strong peer support and
+              shared frameworks.
             </p>
             <div className="mt-6 space-y-4">
               {features.map((feature) => (
@@ -218,19 +209,11 @@ export default function HomePage() {
         <h2 className="section-title">CHOPS Moments</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {gallery.slice(0, 3).map((item) => (
-            <figure
-              key={item.title}
-              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
-            >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
-              />
-              <figcaption className="p-4 text-sm text-slate-700">
-                {item.title}
-              </figcaption>
-            </figure>
+            <img
+              src={item.image}
+              alt={item.title}
+              className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+            />
           ))}
         </div>
         <div className="mt-6 text-center">
@@ -263,7 +246,7 @@ export default function HomePage() {
         <p className="section-kicker">Projects</p>
         <h2 className="section-title">Recent CHOPS project moments</h2>
         <div className="mt-8 grid gap-6 grid-cols-3">
-          {gallery.slice(0, 3).map((item) => (
+          {projects.slice(0, 3).map((item) => (
             <figure
               key={item.title}
               className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"

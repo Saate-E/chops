@@ -18,11 +18,14 @@ export default function ContactPage() {
               inquire about current humanitarian initiatives.
             </p>
             <div className="mt-6 space-y-2 text-slate-600">
-              <p>Email: connect@chopsfellowship.org</p>
-              <p>Phone: +1 (000) 555-2026</p>
               <p>
-                Address: Rotary Leadership Hub, International District Network
+                Email:{" "}
+                <a href="mailto:connect@chopsfellowship.org">
+                  connect@chopsfellowship.org
+                </a>
               </p>
+              <p>Phone: +2348035431226, +16475741298, +2348036752635</p>
+              <p>Address:</p>
             </div>
           </div>
           <form className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">

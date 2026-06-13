@@ -21,7 +21,7 @@ export default function SiteLayout() {
             <img
               src={Logo}
               alt="CHOPS International"
-              className="w-20 lg:w-35 object-fill"
+              className="w-30 lg:w-40 object-fill"
             />
           </NavLink>
           <button

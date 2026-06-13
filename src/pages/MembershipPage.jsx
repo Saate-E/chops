@@ -98,8 +98,8 @@ export default function MembershipPage() {
           <div>
             <h2 className="section-title">Who can join?</h2>
             <p className="section-text">
-              Membership in CHOPS is open to those who led their clubs during
-              the Create Hope year.
+              Membership in CHOPS is open to those who led their clubs and
+              districts during the Create Hope year 2023-2024.
             </p>
             <ul className="mt-6 space-y-3 text-slate-600">
               <li>Exclusive leadership network access</li>

@@ -19,6 +19,9 @@ import gallery18 from "./assets/gallery18.jpg";
 import gallery19 from "./assets/gallery19.jpg";
 import gallery20 from "./assets/gallery20.jpg";
 import gallery21 from "./assets/gallery21.jpg";
+import sports from "./assets/sports.jpeg";
+import beach from "./assets/cleanup.jpeg";
+import green from "./assets/green 3.jpeg";
 
 export const navItems = [
   { to: "/", label: "Home" },
@@ -34,16 +37,16 @@ export const navItems = [
 
 export const pillars = [
   {
-    title: "Promoting Peace",
-    text: "Supporting peace-centered programs in troubled nations and strengthening local conflict resolution efforts.",
+    title: "Collaborating projects with Clubs and Districts",
+    text: "Fostering partnerships that amplify the impact of service initiatives across regions.",
   },
   {
     title: "Mental Health Priority",
     text: "Normalizing mental health conversations and partnering on outreach that reduces stigma in our communities.",
   },
   {
-    title: "Empowering Girls",
-    text: "Advancing education, leadership opportunities, and safe community pathways for girls across regions.",
+    title: "Green Schools Initiatives",
+    text: "Promoting environmental awareness and sustainability through youth education and community programs.",
   },
 ];
 
@@ -146,6 +149,21 @@ export const gallery = [
   {
     title: "Gallery Image 21",
     image: gallery21,
+  },
+];
+
+export const projects = [
+  {
+    title: "Sport for Peace 2024",
+    image: sports,
+  },
+  {
+    title: "Eket Beach CleanUp",
+    image: beach,
+  },
+  {
+    title: "Green Schools Initiatives",
+    image: green,
   },
 ];
 
