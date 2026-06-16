@@ -30,7 +30,7 @@ export const navItems = [
   { to: "/membership", label: "Membership" },
   { to: "/news", label: "News" },
   { to: "/gallery", label: "Gallery" },
-  { to: "/blog", label: "Blog" },
+  { to: "/digest", label: "Digest" },
   { to: "/partners", label: "Partners" },
   { to: "/contact", label: "Contact" },
 ];
@@ -52,12 +52,12 @@ export const pillars = [
 
 export const updates = [
   {
-    title: "Regional Reunions 2025",
-    text: "Reconnect with fellow CHOPS members through regional gatherings that blend fellowship and service planning.",
+    title: "International and Regional Reunions",
+    text: "Reconnect with fellow CHOPS members through international and regional gatherings that blend fellowship and service planning.",
   },
   {
-    title: "Polio Plus Momentum",
-    text: "Track CHOPS contributions and partner efforts as we continue supporting global polio eradication goals.",
+    title: "Chops National and International Conventions",
+    text: "To reconnect with CHOP members and share updates on our fellowship's growth and impact, we will be hosting national and international conventions. These events will provide opportunities for networking, collaboration, and celebration of our collective achievements.",
   },
   {
     title: "Service Beyond Terms",
@@ -167,20 +167,60 @@ export const projects = [
   },
 ];
 
-export const blogs = [
+export const digest = [
   {
-    title: "Leadership Reflections from the Create Hope Year",
-    snippet:
-      "CHOPS members share what they learned leading through a pivotal year of global recovery.",
+    title: "CHOP FELLOWSHIP DIGEST: January 2025",
+    snippet: "Meet the Leaders of CHOPS Fellowhip International",
+    link: "https://eu.wps.com/cms/docs/d/cbRadtfk3Z5XFIlx",
   },
   {
-    title: "Stories of Lives Transformed by Rotary Projects",
-    snippet:
-      "First-hand accounts highlight how fellowship-led action continues to shape communities.",
+    title: "CHOP FELLOWSHIP DIGEST: March 2025",
+    snippet: "Be a pillar of support to your clubs.",
+    link: "https://eu.wps.com/cms/docs/d/cbRadhKC9kVwaeQv",
   },
   {
-    title: "Mental Health and Community Resilience Insights",
+    title: "CHOP FELLOWSHIP DIGEST: April 2025",
     snippet:
-      "Expert perspectives on practical ways to build resilient and compassionate support systems.",
+      "Create Hope Presidents: Building bridges of hope at first National Conference.",
+    link: "https://eu.wps.com/cms/docs/d/cbRadf1iZuSeF8Qc",
+  },
+  {
+    title: "CHOP FELLOWSHIP DIGEST: May 2025",
+    snippet: "Embrace the spirit of frendship.",
+    link: "https://eu.wps.com/cms/docs/d/cbRadijWcl5zpIYL",
+  },
+  {
+    title: "CHOP FELLOWSHIP DIGEST: June 2025",
+    snippet:
+      "Create Hope Presidents shine at Rotary International Convention at Calgary.",
+    link: "https://eu.wps.com/cms/docs/d/cbRadqMWeRd0QHpr",
+  },
+  {
+    title: "CHOP FELLOWSHIP DIGEST: July 2025",
+    snippet:
+      "CHOPS members continues to create Hope at D9149 DG promax installation.",
+    link: "https://eu.wps.com/cms/docs/d/cbRadbvlglrA8CYS",
+  },
+  {
+    title: "CHOP FELLOWSHIP DIGEST: September 2025",
+    snippet:
+      "CHOPS Fellowship International lights up Rotary EMEA Fusion Institute Brussels.",
+    link: "https://eu.wps.com/cms/docs/d/cbRadoKXvONl1PDb",
+  },
+  {
+    title: "CHOP FELLOWSHIP DIGEST: October 2025",
+    snippet: "CHOPS Fellowship joins the #Endpolionow campaign.",
+    link: "https://eu.wps.com/cms/docs/d/cbRadpyI3bJiMvya",
+  },
+  {
+    title: "CHOP FELLOWSHIP DIGEST: February 2026",
+    snippet:
+      "RI President Francisco Arezzo visits Nigeria, urges unity and peaceful coexistence.",
+    link: "https://eu.wps.com/cms/docs/d/cbRadqsEc7jZjsSm",
+  },
+  {
+    title: "CHOP FELLOWSHIP DIGEST: May 2026",
+    snippet: "Rotary and the Police has something in common.",
+    link: "https://eu.wps.com/cms/docs/d/cbRadcgCsoSj5y3l",
   },
 ];

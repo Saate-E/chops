@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import PageHero from "../components/PageHero";
-import { blogs, gallery, pillars, projects, updates } from "../content";
+import { digest, gallery, pillars, projects, updates } from "../content";
 import hero1 from "../assets/hero.jpg";
 import hero2 from "../assets/hero2.jpg";
 import hero3 from "../assets/hero3.jpg";
@@ -281,10 +281,10 @@ export default function HomePage() {
       </section>
 
       <section className="section-shell bg-slate-100">
-        <p className="section-kicker">Recent Blog Posts</p>
+        <p className="section-kicker">Recent Digest Posts</p>
         <h2 className="section-title">CHOPS Fellowship Digest highlights</h2>
         <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {blogs.map((post) => (
+          {digest.slice(0, 3).map((post) => (
             <article
               key={post.title}
               className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
@@ -294,13 +294,21 @@ export default function HomePage() {
               </h3>
               <p className="mt-3 text-slate-600">{post.snippet}</p>
               <Link
-                to="/blog"
+                to={post.link}
                 className="mt-4 inline-block text-sm font-semibold text-amber-500"
               >
                 Read more
               </Link>
             </article>
           ))}
+          <div className="mt-6 text-left">
+            <Link
+              to="/digest"
+              className="inline-block font-semibold text-slate-900 hover:text-amber-500"
+            >
+              See More ......
+            </Link>
+          </div>
         </div>
       </section>
 
