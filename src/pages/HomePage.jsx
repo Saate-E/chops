@@ -1,11 +1,19 @@
+import { useEffect, useRef, useState } from "react";
+import {
+  FaBuilding,
+  FaGlobeAfrica,
+  FaMapMarkedAlt,
+  FaNetworkWired,
+  FaUsers,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 import PageHero from "../components/PageHero";
 import { digest, gallery, pillars, projects, updates } from "../content";
 import hero1 from "../assets/hero.jpg";
 import hero2 from "../assets/hero2.jpg";
 import hero3 from "../assets/hero3.jpg";
-import gallery1 from "../assets/gallery1.jpg";
 import green from "../assets/green 1.jpeg";
+import counterBg from "../assets/green 2.jpeg";
 
 const constructions = [
   {
@@ -52,6 +60,14 @@ const features = [
   },
 ];
 
+const stats = [
+  { value: 214, label: "Members", icon: FaUsers },
+  { value: 214, label: "Rotary Clubs", icon: FaBuilding },
+  { value: 11, label: "Districts", icon: FaNetworkWired },
+  { value: 46, label: "Cities / Location", icon: FaMapMarkedAlt },
+  { value: 6, label: "Countries", icon: FaGlobeAfrica },
+];
+
 const testimonials = [
   {
     name: "District Govenor",
@@ -70,7 +86,59 @@ const testimonials = [
   },
 ];
 
+function AnimatedCounter({ value, start }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!start) return undefined;
+
+    const duration = 1600;
+    const startTime = performance.now();
+    let animationFrame;
+
+    const updateCount = (currentTime) => {
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+      setCount(Math.round(value * easedProgress));
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(updateCount);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(updateCount);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [start, value]);
+
+  return count.toLocaleString();
+}
+
 export default function HomePage() {
+  const [hasStartedCounting, setHasStartedCounting] = useState(false);
+  const counterRef = useRef(null);
+
+  useEffect(() => {
+    const counterElement = counterRef.current;
+
+    if (!counterElement || hasStartedCounting) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHasStartedCounting(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.35 },
+    );
+
+    observer.observe(counterElement);
+
+    return () => observer.disconnect();
+  }, [hasStartedCounting]);
+
   return (
     <>
       <PageHero
@@ -147,6 +215,53 @@ export default function HomePage() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section-shell">
+        <div
+          ref={counterRef}
+          className="relative overflow-hidden rounded-2xl bg-slate-900 px-5 py-14 text-center shadow-sm sm:px-8 lg:px-12"
+        >
+          <img
+            src={counterBg}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full object-cover opacity-35"
+          />
+          <div className="absolute inset-0 bg-white/65"></div>
+          <div className="relative">
+            <p className="section-kicker text-left">Counter</p>
+            <h2 className="section-title text-left">
+              Our growing CHOPS network
+            </h2>
+            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+              {stats.map((stat) => {
+                const Icon = stat.icon;
+
+                return (
+                  <div
+                    key={stat.label}
+                    className="rounded-xl bg-white px-4 py-7 shadow-lg shadow-slate-900/10"
+                  >
+                    <Icon
+                      className="mx-auto mb-5 text-4xl text-amber-600"
+                      aria-hidden="true"
+                    />
+                    <p className="text-4xl font-bold text-amber-600">
+                      <AnimatedCounter
+                        value={stat.value}
+                        start={hasStartedCounting}
+                      />
+                    </p>
+                    <p className="mt-3 text-xs font-bold uppercase tracking-wide text-slate-700">
+                      {stat.label}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </section>
 
