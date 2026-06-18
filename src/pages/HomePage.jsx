@@ -142,8 +142,8 @@ export default function HomePage() {
   return (
     <>
       <PageHero
-        title="Welcome to CHOPS International"
-        description="We are Rotary leaders who served as Club Presidents during the 2023-2024 theme year, united to keep creating hope in communities worldwide."
+        title="CHOPS International Fellowship"
+        description="We are Rotary leaders who served as Club Presidents during the 2023-2024 (Create Hope in the World)"
         fullHeight
         images={[hero1, hero2, hero3]}
       />
@@ -360,7 +360,7 @@ export default function HomePage() {
       <section className="section-shell bg-slate-100">
         <p className="section-kicker">Projects</p>
         <h2 className="section-title">Recent CHOPS project moments</h2>
-        <div className="mt-8 grid gap-6 grid-cols-3">
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.slice(0, 3).map((item) => (
             <figure
               key={item.title}
@@ -369,7 +369,7 @@ export default function HomePage() {
               <img
                 src={item.image}
                 alt={item.title}
-                className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+                className="h-72 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-64"
               />
               <figcaption className="p-4 text-sm text-slate-700">
                 {item.title}
