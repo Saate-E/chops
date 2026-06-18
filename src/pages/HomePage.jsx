@@ -408,12 +408,13 @@ export default function HomePage() {
                 {post.title}
               </h3>
               <p className="mt-3 text-slate-600">{post.snippet}</p>
-              <Link
-                to={post.link}
+              <a
+                href={post.link}
+                rel="noreferrer"
                 className="mt-4 inline-block text-sm font-semibold text-amber-500"
               >
                 Read more
-              </Link>
+              </a>
             </article>
           ))}
           <div className="mt-6 text-left">

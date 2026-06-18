@@ -53,11 +53,11 @@ export const pillars = [
 export const updates = [
   {
     title: "International and Regional Reunions",
-    text: "Reconnect with fellow CHOPS members through international and regional gatherings that blend fellowship and service planning.",
+    text: "Reconnect with fellow CHOPSSSS members through international and regional gatherings that blend fellowship and service planning.",
   },
   {
-    title: "Chops National and International Conventions",
-    text: "To reconnect with CHOP members and share updates on our fellowship's growth and impact, we will be hosting national and international conventions. These events will provide opportunities for networking, collaboration, and celebration of our collective achievements.",
+    title: "CHOPSS National and International Conventions",
+    text: "To reconnect with CHOPSSS members and share updates on our fellowship's growth and impact, we will be hosting national and international conventions. These events will provide opportunities for networking, collaboration, and celebration of our collective achievements.",
   },
   {
     title: "Service Beyond Terms",
@@ -169,58 +169,68 @@ export const projects = [
 
 export const digest = [
   {
-    title: "CHOP FELLOWSHIP DIGEST: January 2025",
-    snippet: "Meet the Leaders of CHOPS Fellowhip International",
-    link: "https://eu.wps.com/cms/docs/d/cbRadtfk3Z5XFIlx",
+    title: "CHOPS FELLOWSHIP DIGEST: January 2025",
+    snippet: "Meet the Leaders of CHOPSSS Fellowhip International",
+    link: "/digest/JANUARY-3.pdf",
   },
   {
-    title: "CHOP FELLOWSHIP DIGEST: March 2025",
+    title: "CHOPS FELLOWSHIP DIGEST: March 2025",
     snippet: "Be a pillar of support to your clubs.",
-    link: "https://eu.wps.com/cms/docs/d/cbRadhKC9kVwaeQv",
+    link: "/digest/MARCH.pdf",
   },
   {
-    title: "CHOP FELLOWSHIP DIGEST: April 2025",
+    title: "CHOPS FELLOWSHIP DIGEST: April 2025",
     snippet:
       "Create Hope Presidents: Building bridges of hope at first National Conference.",
-    link: "https://eu.wps.com/cms/docs/d/cbRadf1iZuSeF8Qc",
+    link: "/digest/APRIL.pdf",
   },
   {
-    title: "CHOP FELLOWSHIP DIGEST: May 2025",
+    title: "CHOPS FELLOWSHIP DIGEST: May 2025",
     snippet: "Embrace the spirit of frendship.",
-    link: "https://eu.wps.com/cms/docs/d/cbRadijWcl5zpIYL",
+    link: "/digest/MAY-2.pdf",
   },
   {
-    title: "CHOP FELLOWSHIP DIGEST: June 2025",
+    title: "CHOPS FELLOWSHIP DIGEST: June 2025",
     snippet:
       "Create Hope Presidents shine at Rotary International Convention at Calgary.",
-    link: "https://eu.wps.com/cms/docs/d/cbRadqMWeRd0QHpr",
+    link: "/digest/JUNE-2.pdf",
   },
   {
-    title: "CHOP FELLOWSHIP DIGEST: July 2025",
+    title: "CHOPS FELLOWSHIP DIGEST: July 2025",
     snippet:
       "CHOPS members continues to create Hope at D9149 DG promax installation.",
-    link: "https://eu.wps.com/cms/docs/d/cbRadbvlglrA8CYS",
+    link: "/digest/JULY.pdf",
   },
   {
-    title: "CHOP FELLOWSHIP DIGEST: September 2025",
+    title: "CHOPS FELLOWSHIP DIGEST: September 2025",
     snippet:
       "CHOPS Fellowship International lights up Rotary EMEA Fusion Institute Brussels.",
-    link: "https://eu.wps.com/cms/docs/d/cbRadoKXvONl1PDb",
+    link: "/digest/SEPTEMBER-2.pdf",
   },
   {
-    title: "CHOP FELLOWSHIP DIGEST: October 2025",
+    title: "CHOPS FELLOWSHIP DIGEST: October 2025",
     snippet: "CHOPS Fellowship joins the #Endpolionow campaign.",
-    link: "https://eu.wps.com/cms/docs/d/cbRadpyI3bJiMvya",
+    link: "/digest/OCTOBER.pdf",
   },
   {
-    title: "CHOP FELLOWSHIP DIGEST: February 2026",
+    title: "CHOPS FELLOWSHIP DIGEST: January 2026",
+    snippet: "Prioritize tangible projects that will stand the test of time",
+    link: "/digest/JANUARY.pdf",
+  },
+  {
+    title: "CHOPS FELLOWSHIP DIGEST: February 2026",
     snippet:
       "RI President Francisco Arezzo visits Nigeria, urges unity and peaceful coexistence.",
-    link: "https://eu.wps.com/cms/docs/d/cbRadqsEc7jZjsSm",
+    link: "/digest/FEBRUARY-2.pdf",
   },
   {
-    title: "CHOP FELLOWSHIP DIGEST: May 2026",
+    title: "CHOPS FELLOWSIP DIGEST: March 2026",
+    snippet: "The World needs Rotarians to continue creating Hope",
+    link: "/digest/MARCH-6.pdf",
+  },
+  {
+    title: "CHOPS FELLOWSHIP DIGEST: May 2026",
     snippet: "Rotary and the Police has something in common.",
-    link: "https://eu.wps.com/cms/docs/d/cbRadcgCsoSj5y3l",
+    link: "/digest/MAY-6.pdf",
   },
 ];
