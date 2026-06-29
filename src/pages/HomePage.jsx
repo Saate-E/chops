@@ -13,6 +13,7 @@ import hero1 from "../assets/hero.jpg";
 import hero2 from "../assets/hero2.jpg";
 import hero3 from "../assets/hero3.jpg";
 import green from "../assets/green 1.jpeg";
+import green2 from "../assets/mental.jpg";
 import counterBg from "../assets/green 2.jpeg";
 
 const constructions = [
@@ -31,8 +32,7 @@ const constructions = [
   {
     title: "Mental Health Action Campaigns",
     text: "Programs reducing stigma through education, dialogue, and practical community support.",
-    image:
-      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80",
+    image: green2,
   },
   {
     title: "Green Schools Initiatives",
@@ -70,12 +70,12 @@ const stats = [
 
 const testimonials = [
   {
-    name: "District Govenor",
+    name: "Create Hope District Govenor",
     quote:
       "CHOPS gave us a practical platform to keep serving together after our terms ended. The network is active and impactful.",
   },
   {
-    name: "Club President",
+    name: "Create Hope Club President",
     quote:
       "Our mental health collaboration reached more families because CHOPS connected us to members with the right expertise.",
   },

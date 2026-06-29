@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { navItems } from "../content";
-import { AtSign } from "lucide-react";
-import { TbBrandTiktokFilled, TbBrandFacebookFilled } from "react-icons/tb";
+import {
+  TbBrandTiktokFilled,
+  TbBrandFacebookFilled,
+  TbBrandTelegram,
+  TbBrandYoutube,
+} from "react-icons/tb";
 import Logo from "../assets/logo.png";
 
 export default function SiteLayout() {
@@ -103,22 +107,28 @@ export default function SiteLayout() {
             <h4 className="font-semibold text-amber-600">Connect with Us:</h4>
             <div className="mt-3 flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/420869457776572?ref=NONE_xav_ig_profile_page_web"
                 className="text-slate-600 hover:text-amber-600 transition"
               >
                 <TbBrandFacebookFilled className="h-6 w-6" />
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@chops.fellowship?_r=1&_t=ZS-97LBsyd3xkj"
                 className="text-slate-600 hover:text-amber-600 transition"
               >
                 <TbBrandTiktokFilled className="h-6 w-6" />
               </a>
               <a
-                href="#"
+                href="https://t.me/chopsfellowship"
                 className="text-slate-600 hover:text-amber-600 transition"
               >
-                <AtSign className="h-6 w-6" />
+                <TbBrandTelegram className="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.youtube.com/@CHOPSFELLOWSHIP"
+                className="text-slate-600 hover:text-amber-600 transition"
+              >
+                <TbBrandYoutube className="h-6 w-6" />
               </a>
             </div>
           </div>

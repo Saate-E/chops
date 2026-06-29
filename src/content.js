@@ -229,6 +229,12 @@ export const digest = [
     link: "/digest/MARCH-6.pdf",
   },
   {
+    title: "CHOPS FELLOWSHIP DIGEST: April 2026",
+    snippet:
+      "CHOPS Fellowship inspire action, create hope at the 2nd International Conference",
+    link: "/digest/APRIL-3.pdf",
+  },
+  {
     title: "CHOPS FELLOWSHIP DIGEST: May 2026",
     snippet: "Rotary and the Police has something in common.",
     link: "/digest/MAY-6.pdf",
